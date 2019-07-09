@@ -69,8 +69,13 @@
                 <br/>
                 <br/>
                 <h3>форма формирования запроса</h3>
-                
-                <form action="/vendor/didrive_mod/iiko_checks/ajax.php" target="iframe_for_ajax" method="GET" id="form_for_ajax" >
+
+                <form action="/vendor/didrive_mod/ajax_checks/1/ajax.php" target="iframe_for_ajax" method="GET" id="form_for_ajax" >
+
+                    строка запроса
+                    <input name="ajax_uri" id="ajax_uri" type="string" class="form-control" >
+                    <br/>
+
 
                     {% set mans = readItems( '070.jobman', null )  %}
                     {#{ pa(mans) }#}
@@ -87,11 +92,11 @@
 
                     </select>
 
-                        <br/>
-                        
+                    <br/>
+
                     <input name="start_load" type="date" class="form-control" >
-                        <br/>
-                        
+                    <br/>
+
                     <select name="user" class="form-control" >
 
                         <option value="">все пользователи определённые на работу в точках продаж</option>
@@ -102,33 +107,33 @@
 
                     </select>
 
-                        <br/>
-                        <br/>
-                        
+                    <br/>
+                    <br/>
+
                     <label>
                         <input type="checkbox" name="del_old" value="da" > удалить старые данные
                     </label>
-                        <br/>
+                    <br/>
 
                     <label>
                         <input type="checkbox" name="show_get" value="da" > показать входящие данные
                     </label>
-                        <br/>
+                    <br/>
 
                     <label>
                         <input type="checkbox" name="show_timer" value="da" > показать время выполнения
                     </label>
-                        <br/>
+                    <br/>
 
                     <label>
                         <input type="checkbox" name="show_request" value="da" > показать строку запроса
                     </label>
-                        <br/>
+                    <br/>
 
                     <label>
                         <input type="checkbox" name="show" value="html" checked="checked" > формат получаемго результата в HTML
                     </label>
-                        <br/>
+                    <br/>
 
 
                     <input type="hidden" name="action" value="ajax" >
